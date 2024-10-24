@@ -70,6 +70,14 @@ async function addOrder(order){
     return dbResult;
 }
 
+async function registerUser(user){
+  const db = await connectToDatabase();
+  const dbResult = await db.collection('Users').insertOne(user);
+return dbResult;
+}
+
+async function 
+
 ping();
 
-export{GetAllPetOwners, GetPetOwnerById, addPetOwner, updatePetOwner, deletePetOwner, addOrder, getOrderById};
+export{GetAllPetOwners, GetPetOwnerById, addPetOwner, updatePetOwner, deletePetOwner, addOrder,registerUser, getOrderById};

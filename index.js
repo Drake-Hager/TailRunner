@@ -8,7 +8,7 @@ const debugIndex = debug('app:Index');
 
 import { dogOwnerRouter } from './routes/api/dogOwner.js';
 import { orderRouter } from './routes/api/order.js';
-
+import { userRouter } from './routes/api/user.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -28,3 +28,4 @@ app.listen(port, () => {
 
 app.use('/api/pet-owners', dogOwnerRouter);
 app.use('/api/orders', orderRouter);
+app.use('/api/users', userRouter)
